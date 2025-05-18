@@ -32,6 +32,33 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
+// Tema oscuro
+body.dark {
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+  --ion-toolbar-background: #1f1f1f;
+  --ion-item-background: #1f1f1f;
+}
+.small-avatar {
+  width: 28px;
+  height: 28px;
+  margin-left: 2px; /* Espacio entre el ícono y el avatar */
+  margin-right: 10px;
+}
+
+.small-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.chip-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Para centrar verticalmente */
+}
+
+
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';

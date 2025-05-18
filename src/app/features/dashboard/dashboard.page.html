@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Vehículos monitoreados</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>Total: 25</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ubicación actual</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="map-placeholder">[ Mapa aquí ]</div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header color="success">Últimas alertas</ion-list-header>
+    <ion-item>
+      <ion-label color="danger">Vehículo #12 fuera de zona</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="warning">Vehículo #8 apagado inesperadamente</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
