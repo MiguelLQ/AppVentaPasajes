@@ -1,0 +1,7 @@
+{
+  "name": "transporte-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
