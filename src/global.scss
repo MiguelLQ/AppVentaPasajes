@@ -38,6 +38,15 @@ body.dark {
   --ion-text-color: #ffffff;
   --ion-toolbar-background: #1f1f1f;
   --ion-item-background: #1f1f1f;
+  --scroll-bg-blue: #001549; /* azul más oscuro para tema oscuro */
+  --custom-text-color: #cac0c0;
+}
+
+:root {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --scroll-bg-blue: #012380; /* azul para tema claro */
+  --custom-text-color: #fcf8f8;
 }
 .small-avatar {
   width: 28px;
@@ -58,6 +67,31 @@ body.dark {
   height: 100%; /* Para centrar verticalmente */
 }
 
+.scroll-background {
+  min-height: 100%;
+  max-width: 100%;
+  padding: 16px;
+
+  background: linear-gradient(
+    to bottom,
+    #012380 0%,
+    #012380 40vh,
+    var(--ion-background-color) 40vh,
+    var(--ion-background-color) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;  /* importante para que el degradado no se escale raro */
+}
+.nabvar{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+ion-tab-bar{
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+    box-shadow: 0 2px 12px rgba(24, 24, 24, 0.507);
+}
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */

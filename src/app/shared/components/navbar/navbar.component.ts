@@ -15,12 +15,15 @@ addIcons({
 
 })
 export class NavbarComponent {
-   isDarkMode = false;
+  isDarkMode = false;
 
   constructor() {
-    const theme = localStorage.getItem('theme');
-    this.isDarkMode = theme === 'dark';
 
+  }
+  ngOnInit() {
+    // Solo leemos lo que está en localStorage
+    const savedTheme = localStorage.getItem('theme');
+    this.isDarkMode = savedTheme === 'dark';
     document.body.classList.toggle('dark', this.isDarkMode);
   }
 

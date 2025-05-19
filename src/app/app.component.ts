@@ -6,10 +6,14 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { RouterModule } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { homeOutline, settingsOutline } from 'ionicons/icons';
-import { carOutline } from 'ionicons/icons';
+import { carOutline,addCircleOutline,airplane, busOutline} from 'ionicons/icons';
+import { IonicSlides } from '@ionic/angular/standalone';
 
 addIcons({
   'car-outline': carOutline,
+  'add-circle-outline':addCircleOutline,
+  'airplane':airplane,
+   'busOutline':busOutline,
 });
 @Component({
   selector: 'app-root',

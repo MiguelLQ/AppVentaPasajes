@@ -1,10 +1,61 @@
-.map-placeholder {
-  width: 100%;
-  height: 200px;
-  background: #e0e0e0;
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+ion-badge {
+  font-weight: 600;
+}
+ion-grid {
+  background-color: var(--ion-background-color); // O también prueba con --ion-card-background
+  border-radius: 50px;
+}
+.card-des {
+  background-color: rgba(19, 4, 105, 0.363); // Blanco con opacidad del 80%
+  backdrop-filter: blur(4px); // Efecto de desenfoque opcional
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.315);
+}
+.scroll-background{
+padding-top: 60px;
+}
+
+
+// ion-content {
+//   --background: none; /* Desactiva el fondo por defecto de Ionic */
+
+//   background: linear-gradient(
+//     to bottom, 
+//     #4e54c8 0%, 
+//     #4e54c8 40vh, 
+//     #ffffff 40vh, 
+//     #ffffff 100%
+//   );
+
+//   background-attachment: scroll; /* Asegura que el fondo se desplace con el contenido */
+//   background-repeat: no-repeat;
+//   background-size: 100% auto; /* Deja que el fondo crezca según el scroll */
+// }
+
+.dashboard-card {
+  margin: 5px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-icon {
+  font-size: 24px;
+  color: var(--ion-color-primary);
+  margin-right: 10px;
+}
+
+.card-h {
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #666;
-  font-style: italic;
+  gap: 5px;
+}
+
+
+ion-card-title{
+color: var(--custom-text-color);
 }

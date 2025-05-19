@@ -15,6 +15,7 @@ import { IonicModule } from '@ionic/angular';
     FormsModule,
     RouterModule,
     IonicModule  // ✅ SOLO este para todos los componentes de Ionic
+    
   ]
 })
 export class VehiculosPage implements OnInit {
@@ -28,6 +29,14 @@ export class VehiculosPage implements OnInit {
       anio: 2020,
       color: 'Rojo',
       propietario: 'Juan Pérez'
+    },
+    {
+      marca: 'Hyundai',
+      modelo: 'Elantra',
+      placa: 'XYZ-789',
+      anio: 2019,
+      color: 'Azul',
+      propietario: 'Ana García'
     },
     {
       marca: 'Hyundai',

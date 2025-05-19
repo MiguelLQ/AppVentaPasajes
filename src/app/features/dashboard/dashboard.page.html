@@ -1,36 +1,93 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content class="ion-padding" [fullscreen]="true">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Vehículos monitoreados</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label>Total: 25</ion-label>
-    </ion-card-content>
-  </ion-card>
+<ion-content>
+  <div class="scroll-background">
+    <ion-card class="card-des">
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+    <ion-grid>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Ubicación actual</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <div class="map-placeholder">[ Mapa aquí ]</div>
-    </ion-card-content>
-  </ion-card>
+      <!-- Fila 1: dos tarjetas una al lado de otra SOLO en pantallas pequeñas -->
+       <ion-row>
+        <ion-col size="12">
+          <ion-card class="dashboard-card">
+            <ion-card-header class="card-h">
+              <ion-icon name="people" slot="start" class="dashboard-icon"></ion-icon>
+              <ion-card-subtitle>Users</ion-card-subtitle>
+              <ion-card-title>1,250</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Active users this week
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-  <ion-list>
-    <ion-list-header color="success">Últimas alertas</ion-list-header>
-    <ion-item>
-      <ion-label color="danger">Vehículo #12 fuera de zona</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label color="warning">Vehículo #8 apagado inesperadamente</ion-label>
-    </ion-item>
-  </ion-list>
+      <ion-row>
+        <ion-col size="6" size-md="12">
+          <ion-card class="dashboard-card">
+            <ion-card-header class="card-h">
+              <ion-icon name="bus-outline" slot="start" class="dashboard-icon"></ion-icon>
+              <ion-card-subtitle>Flights</ion-card-subtitle>
+              <ion-card-title>120</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Upcoming flights this month
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
 
+        <ion-col size="6" size-md="12">
+          <ion-card class="dashboard-card">
+            <ion-card-header class="card-h">
+              <ion-icon name="calendar-checkmark" slot="start" class="dashboard-icon"></ion-icon>
+              <ion-card-subtitle>Bookings</ion-card-subtitle>
+              <ion-card-title>75</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Total bookings confirmed
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <!-- Fila 2: tarjeta que ocupa todo el ancho SIEMPRE -->
+      
+    </ion-grid>
+
+
+    <!-- Estadísticas (Placeholder gráfico) -->
+    <ion-card>
+      <ion-card-header class="card-h">
+        <ion-card-title>Monthly Revenue</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Aquí puedes integrar una librería gráfica tipo Chart.js o ApexCharts -->
+        <div style="height:200px; display:flex; justify-content:center; align-items:center; color: #999;">
+          Chart Placeholder
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Últimas reservas -->
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Latest Bookings</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let booking of latestBookings">
+        <ion-label>
+          <h3>{{ booking.flight }}</h3>
+          <p>{{ booking.date | date:'mediumDate' }} - {{ booking.status }}</p>
+        </ion-label>
+        <ion-badge [color]="booking.status === 'Confirmed' ? 'success' : 'medium'">
+          {{ booking.status }}
+        </ion-badge>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
