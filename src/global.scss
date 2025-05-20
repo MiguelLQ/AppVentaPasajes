@@ -38,14 +38,14 @@ body.dark {
   --ion-text-color: #ffffff;
   --ion-toolbar-background: #1f1f1f;
   --ion-item-background: #1f1f1f;
-  --scroll-bg-blue: #001549; /* azul más oscuro para tema oscuro */
+  --scroll-bg-blue: #b14ceb; /* azul más oscuro para tema oscuro */
   --custom-text-color: #cac0c0;
 }
 
 :root {
   --ion-background-color: #ffffff;
   --ion-text-color: #000000;
-  --scroll-bg-blue: #012380; /* azul para tema claro */
+  --scroll-bg-blue: #6918c5; /* azul para tema claro */
   --custom-text-color: #fcf8f8;
 }
 .small-avatar {
@@ -74,8 +74,8 @@ body.dark {
 
   background: linear-gradient(
     to bottom,
-    #012380 0%,
-    #012380 40vh,
+    #a801db 0%,
+    #470275 40vh,
     var(--ion-background-color) 40vh,
     var(--ion-background-color) 100%
   );
