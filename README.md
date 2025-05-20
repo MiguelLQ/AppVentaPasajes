@@ -14,7 +14,7 @@ Aplicación móvil creada con Ionic y Angular para gestión de transporte.
 - git clone urlRepository
 - npm install -g @ionic/cli
 - npm install -g @angular/cli
-- npm instal @capacitor
+- npm install @capacitor
 - npm instal @capacitor/cli
 - git remote add origin urlRepository ( agregar un repositorio remoto )
 - git pull origin main ( traer todos los cambios desde el repo a tu proyecto )
