@@ -15,5 +15,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./features/vehiculos/vehiculos.routes').then(m => m.routes),
   },
-  
+  {
+    path: 'usuario',
+    loadChildren: () =>
+      import('./features/usuario/usuario.routes').then(m => m.routes),
+  }
+
+
 ];
