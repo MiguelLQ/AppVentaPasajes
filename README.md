@@ -20,7 +20,7 @@ Aplicación móvil creada con Ionic y Angular para gestión de transporte.
 - git pull origin main ( traer todos los cambios desde el repo a tu proyecto )
 - git fetch origin ( tarer solamente los cambios acutalizados)
 
-## Instalacion
+## compilación
 
 ```bash
 npm install
