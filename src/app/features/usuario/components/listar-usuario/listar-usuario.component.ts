@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { usuarioService } from '../../services/usuarioService';
+import { Iusuario } from '../../services/Iusuario';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-listar-usuario',
@@ -9,13 +12,24 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,  // ✅ Esto es lo que te falta
   imports: [
     RouterModule,
-    IonicModule
+    IonicModule,
+    CommonModule
   ]
 })
 export class ListarUsuarioComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit() { }
+  usuarioServicio = inject(usuarioService);
+  usuario: Iusuario[] = [];
+  ngOnInit() { 
+     this.listaUsuario();
+  }
+  listaUsuario(): void {
+    this.usuarioServicio.getUsuario().subscribe({
+      next: (usuarios: Iusuario[]) => {
+        this.usuario = usuarios;
+      }
+    })
+  }
 
 }
