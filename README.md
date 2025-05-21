@@ -20,7 +20,7 @@ Aplicación móvil creada con Ionic y Angular para gestión de transporte.
 - git pull origin main ( traer todos los cambios desde el repo a tu proyecto )
 - git fetch origin ( tarer solamente los cambios acutalizados)
 
-## Instalación luego de clonar
+## Hacer push colaboradores
 // primero conectar tu vs code con tu cuenta de github..
 - git pull origin main --rebase ( siempre traer todos los cambios de repositorio a tu proyecto, si no lo haces no te dejara hacer push)
 - git add .  ( agregar todos los cambios que hicieron )
