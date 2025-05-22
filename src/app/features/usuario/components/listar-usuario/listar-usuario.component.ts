@@ -22,7 +22,7 @@ export class ListarUsuarioComponent implements OnInit {
   usuarioServicio = inject(usuarioService);
   usuario: Iusuario[] = [];
   ngOnInit() { 
-     this.listaUsuario();
+    this.listaUsuario();
   }
   listaUsuario(): void {
     this.usuarioServicio.getUsuario().subscribe({

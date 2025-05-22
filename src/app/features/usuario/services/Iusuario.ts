@@ -1,8 +1,7 @@
 export interface Iusuario {
-    IdUsuario:number
-    IdRol:number               
-    NombreUsuario:string     
-    Contrasena:string      
-    EstadoUsuario:boolean  
-    FechaCreacionUsuario:Date
+  idUsuario: number;
+  idRol: number;
+  nombreUsuario: string;
+  estadoUsuario: boolean;
+  fechaCreacionUsuario: Date;
 }

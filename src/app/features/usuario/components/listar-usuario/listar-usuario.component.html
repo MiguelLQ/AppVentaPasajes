@@ -5,22 +5,20 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-list *ngIf="usuario && usuario.length > 0; else sinUsuarios">
+  <ion-list *ngIf="usuario.length > 0; else sinUsuarios">
     <ion-item *ngFor="let usu of usuario">
       <ion-label>
-        <h2>{{ usu.NombreUsuario }}</h2>
-        <p><strong>ID:</strong> {{ usu.IdUsuario }}</p>
-        <p><strong>Rol:</strong> {{ usu.IdRol }}</p>
-        <p><strong>Contraseña:</strong> {{ usu.Contrasena }}</p>
-        <p><strong>Estado:</strong> {{ usu.EstadoUsuario ? 'Activo' : 'Inactivo' }}</p>
-        <p><strong>Fecha creación:</strong> {{ usu.FechaCreacionUsuario | date:'short' }}</p>
+        <h2>{{ usu.nombreUsuario }}</h2>
+        <p><strong>ID:</strong> {{ usu.idUsuario }}</p>
+        <p><strong>Rol:</strong> {{ usu.idRol }}</p>
+        <p><strong>Nombre:</strong> {{ usu.nombreUsuario }}</p>
+        <p><strong>Estado:</strong> {{ usu.estadoUsuario ? 'Activo' : 'Inactivo' }}</p>
+        <p><strong>Creado:</strong> {{ usu.fechaCreacionUsuario | date:'short' }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
 
   <ng-template #sinUsuarios>
-    <ion-text color="medium">
-      <p>No hay usuarios registrados.</p>
-    </ion-text>
+    <p>No hay usuarios registrados.</p>
   </ng-template>
 </ion-content>

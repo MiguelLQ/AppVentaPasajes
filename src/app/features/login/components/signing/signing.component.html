@@ -1,0 +1,48 @@
+<ion-content class="login-content">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card class="login-card">
+          <ion-card-header>
+            <ion-card-title class="login-title">
+              Iniciar Sesión
+            </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <ion-item class="login-item">
+                <ion-label position="floating">Usuario</ion-label>
+                <ion-input
+                  formControlName="username"
+                  autocomplete="username">
+                </ion-input>
+              </ion-item>
+
+              <ion-item class="login-item">
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input
+                  type="password"
+                  formControlName="password"
+                  autocomplete="current-password">
+                </ion-input>
+              </ion-item>
+
+              <div *ngIf="errorMsg" class="error-msg">
+                {{ errorMsg }}
+              </div>
+
+              <ion-button
+                class="login-button"
+                expand="block"
+                type="submit"
+                [disabled]="loginForm.invalid">
+                Entrar
+              </ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

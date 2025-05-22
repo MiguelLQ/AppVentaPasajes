@@ -1,0 +1,51 @@
+/* Ajusta la altura y fondo del contenido */
+.login-content {
+  --background: var(--ion-color-light-shade);
+  --padding-top: 40px;
+  --padding-bottom: 40px;
+}
+
+/* Card centrado y con elevación */
+.login-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0; /* El ion-card-content ya maneja su padding interno */
+}
+
+/* Título grande y centrado */
+.login-title {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+}
+
+/* Espaciado entre campos */
+.login-item {
+  margin-top: 1rem;
+  --padding-start: 0.75rem;
+  --padding-end: 0.75rem;
+}
+
+/* Mensaje de error resaltado */
+.error-msg {
+  color: var(--ion-color-danger);
+  font-size: 0.9rem;
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+/* Botón con sombra suave */
+.login-button {
+  margin-top: 1.25rem;
+  --border-radius: 24px;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+
+/* Responsive: menos ancho en pantallas grandes */
+@media (min-width: 768px) {
+  .login-card {
+    margin: 0 auto;
+  }
+}

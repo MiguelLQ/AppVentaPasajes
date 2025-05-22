@@ -18,7 +18,7 @@ addIcons({
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonicModule,RouterModule,FooterComponent, NavbarComponent, SidebarComponent],
+  imports: [RouterModule],
   
 })
 export class AppComponent {
